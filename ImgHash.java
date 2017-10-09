@@ -60,19 +60,19 @@ class ImgHash{
     }
     catch (IOException e) {  System.out.println("Error"); }
 
-    return Integer.parseInt("" + pxBelow + pxAvobe) % 100;
+    return Integer.parseInt("" + pxBelow + pxAvobe);
 
   }
 
   public static void main(String[] args) {
     ImgHash ih = new ImgHash();
-    System.out.println("Key Img1: " + ih.imgKeyGen(new File("img1.jpeg")));
-    System.out.println("Key Img4: " + ih.imgKeyGen(new File("img4.jpeg")));
-    System.out.println("Key Img5: " + ih.imgKeyGen(new File("img5.jpeg")));
-    System.out.println("Key Img6: " + ih.imgKeyGen(new File("img6.jpeg")));
+    System.out.println("Img1: " + ih.imgKeyGen(new File("img/img1-1.jpeg")));
+    System.out.println("Img4: " + ih.imgKeyGen(new File("img/img1-2.jpeg")));
+    System.out.println("Img5: " + ih.imgKeyGen(new File("img/img1-3.jpeg")));
+    System.out.println("Img6: " + ih.imgKeyGen(new File("img/img1-4.jpeg")));
 
-    System.out.println("Key vsi1: " + ih.imgKeyGen(new File("vsi1.jpeg")));
-    System.out.println("Key vsi2: " + ih.imgKeyGen(new File("vsi2.jpeg")));
+    System.out.println("vsi1: " + ih.imgKeyGen(new File("img/vsi1.jpeg")));
+    System.out.println("vsi2: " + ih.imgKeyGen(new File("img/vsi2.jpeg")));
   }
 
 }

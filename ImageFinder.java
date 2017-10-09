@@ -39,7 +39,7 @@ class ImageFinder extends JPanel implements ActionListener{
     this.finder = new LinearProbeHash(100);
     this.display = display;
 
-    this.add(new JLabel("<html><center><br><b>Ruleta 4<br>Emanuel Estrada Larios<br>Linear Probing Hash</b><br><br>Problema: Los fotografos que toman fotos en eventos<br>buscan formas rapidas de encontrar fotos duplicadas<br>antes de vender sus paquetes de fotos.<br><br>Seleccione una imagen:<br><br></center></html>"));
+    this.add(new JLabel("<html><center><br><b>Ruleta 4<br>Emanuel Estrada Larios<br>Linear Probing Hash</b><br><br>Problema: Los fot&oacute;grafos que toman fotos en eventos<br>buscan formas r&aacute;pidas de encontrar im&aacute; duplicadas<br>antes de vender sus paquetes de fotograf&iacute;cos.<br><br>Seleccione una imagen:<br><br></center></html>"));
 
     this.tfImagen = new JTextField(25);
     this.add(this.tfImagen);
