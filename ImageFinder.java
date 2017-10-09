@@ -18,9 +18,6 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 
-//import javax.swing.JFrame;
-//import javax.swing.JPanel;
-
 import javax.imageio.*;
 import java.net.*;
 import javax.swing.filechooser.*;
@@ -42,7 +39,7 @@ class ImageFinder extends JPanel implements ActionListener{
     this.finder = new LinearProbeHash(100);
     this.display = display;
 
-    this.add(new JLabel("<html><center><br><b>Ruleta 4<br>Emanuel Estrada Larios<br>Linear Probing Hash</b><br><br>Problema: Con motivo de los recientes desastres naturales<br>mucha gente no tiene información acerca de sus seres queridos.<br>Este herramienta permite que las personas se registren<br>como seguras y busquen informaci&oacute;n acerca de sus familiares.<br><br>Seleccione una imagen:<br><br></center></html>"));
+    this.add(new JLabel("<html><center><br><b>Ruleta 4<br>Emanuel Estrada Larios<br>Linear Probing Hash</b><br><br>Problema: Los fotografos que toman fotos en eventos<br>buscan formas rapidas de encontrar fotos duplicadas<br>antes de vender sus paquetes de fotos.<br><br>Seleccione una imagen:<br><br></center></html>"));
 
     this.tfImagen = new JTextField(25);
     this.add(this.tfImagen);
@@ -113,7 +110,6 @@ class ImageFinder extends JPanel implements ActionListener{
       BufferedImage bufferedThumbnail = new BufferedImage(thumbnail.getWidth(null), thumbnail.getHeight(null), BufferedImage.TYPE_BYTE_GRAY);
 
       bufferedThumbnail.getGraphics().drawImage(thumbnail, 0, 0, null);
-      //ImageIO.write(bufferedThumbnail, "jpeg", new File("result.jpg"));
 
       int[] pixels = bufferedThumbnail.getRGB(0, 0, 8, 8, null, 0, 8);
       int colourAverage = 0;
