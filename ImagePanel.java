@@ -18,7 +18,6 @@ class ImagePanel extends JPanel {
     super();
 
     this.setPreferredSize(new Dimension(500,300));
-    //this.setBackground(Color.WHI);
 
     this.inputImg = null;
   }
@@ -29,7 +28,7 @@ class ImagePanel extends JPanel {
     Graphics2D g2 = (Graphics2D) g;
 
     if(this.inputImg != null)
-      g2.drawImage(this.inputImg,5,5,240,290,null);
+      g2.drawImage(this.inputImg,5,5,490,290,null);
 
   }
 

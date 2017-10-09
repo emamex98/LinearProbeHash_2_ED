@@ -90,13 +90,12 @@ class ImageFinder extends JPanel implements ActionListener{
     }
 
     else if(e.getSource() == this.btSearch){
-      String result = this.searchImage(this.inputImg);
-      JOptionPane.showMessageDialog(null, result);
+      int[] result = this.searchImage(this.inputImg);
     }
 
     else if(e.getSource() == this.btDlt)
       this.deleteImage(this.inputImg);
-
+      this.display.updatePanel(null);
   }
 
   ///////////////////////////////////////////////////////////
@@ -148,17 +147,20 @@ class ImageFinder extends JPanel implements ActionListener{
 
   //////////////////////////////////////////////////////////
 
-  public String searchImage(File img){
+  public int[] searchImage(File img){
     int[] k = finder.searchElement(new Key(imgKeyGen(img),img));
-    if(k.length == 1)
-      return "Imagen encontrada en indice " + k[0] + ", llave #" + imgKeyGen(img);
+    if(k.length == 1){
+      JOptionPane.showMessageDialog(null, "Imagen encontrada en indice " + k[0] + ", llave #" + imgKeyGen(img));
+      return k;
+    }
     else {
       String similarIndexes = "";
       for (int j = 0; j<k.length; j++){
         if(k[j] != 0)
           similarIndexes += k[j] + ", ";
       }
-      return "No se encontro la imagen, imagenes similares en " + similarIndexes;
+      JOptionPane.showMessageDialog(null, "No se encontro la imagen, imagenes similares en " + similarIndexes);
+      return k;
     }
   }
 
